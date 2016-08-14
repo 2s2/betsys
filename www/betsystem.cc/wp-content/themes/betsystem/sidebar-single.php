@@ -11,7 +11,7 @@
 		<div class="b-connect">
 			<a href="#" data-reveal-id="get_consult"  class="b-btn-1">
 				<?php if(ICL_LANGUAGE_CODE=='ru'): ?>
-					Подключится
+					Подключиться
 				<?php elseif(ICL_LANGUAGE_CODE=='en'): ?>
 					Connect
 				<?php elseif(ICL_LANGUAGE_CODE=='es'): ?>

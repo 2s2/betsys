@@ -1,28 +1,20 @@
 <div class="b-sidebar">
   <div class="b-get-cons">
-    <a href="#" data-reveal-id="get_consult">
-      <?php if(ICL_LANGUAGE_CODE=='ru'): ?>
-        Получить консультацию
-      <?php elseif(ICL_LANGUAGE_CODE=='en'): ?>
-        Get a consultation
-      <?php elseif(ICL_LANGUAGE_CODE=='es'): ?>
-        Obtener la consulta.
-      <?php endif;?>
-    </a>
-    <p>
-      <?php if(ICL_LANGUAGE_CODE=='ru'): ?>
-        Прямая консультация по вопросам выбора и настройке программных продуктов
-      <?php elseif(ICL_LANGUAGE_CODE=='en'): ?>
-        On-line consultation related to software choice and software configuration
-      <?php elseif(ICL_LANGUAGE_CODE=='es'): ?>
-        Consulta directa sobre la selección y el ajuste de los productos de software
-      <?php endif;?>
-    </p>
+    <?php if(ICL_LANGUAGE_CODE=='ru'): ?>
+      <a href="#" data-reveal-id="get_consult">Получить консультацию</a>
+      <p>Прямая консультация по вопросам выбора и настройке программных продуктов</p>
+    <?php elseif(ICL_LANGUAGE_CODE=='en'): ?>
+      <a href="#" data-reveal-id="get_consult">Get a consultation</a>
+      <p>On-line consultation related to software choice and software configuration</p>
+    <?php elseif(ICL_LANGUAGE_CODE=='es'): ?>
+      <a href="#" data-reveal-id="get_consult">Obtener la consulta.</a>
+      <p>Consulta directa sobre la selección y el ajuste de los productos de software</p>
+    <?php endif;?>
   </div>
   <div class="b-connect">
     <a href="#" data-reveal-id="get_consult"  class="b-btn-1">
       <?php if(ICL_LANGUAGE_CODE=='ru'): ?>
-        Подключится
+        Подключиться
       <?php elseif(ICL_LANGUAGE_CODE=='en'): ?>
         Connect
       <?php elseif(ICL_LANGUAGE_CODE=='es'): ?>

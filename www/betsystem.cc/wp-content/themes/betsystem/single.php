@@ -15,25 +15,9 @@ get_header();
 							<?php the_content(); ?> 
 
 						</div>
-
-						<?php if(ICL_LANGUAGE_CODE=='ru'): ?> 
-			                <a href="/category/slot/" class="b-back-link">Вернуться в предыдущее меню</a>   
-			                <?php elseif(ICL_LANGUAGE_CODE=='en'): ?> 
-			                <a href="/en/category/slot/" class="b-back-link">Back to previous menu</a>
-			                <?php elseif(ICL_LANGUAGE_CODE=='es'): ?> 
-			                <a href="/es/category/slot/" class="b-back-link">Volver al menú precedente</a>
-			                <?php endif;?> 
- 
-
 					</div>
-					 	 
 <?php endwhile; endif; ?> 
-
-				
 				</div>
-
- 
-        
 <? get_sidebar('single'); ?> 
  
  </div>
@@ -43,5 +27,3 @@ get_header();
 
 <?php get_footer(); ?>
 
-  
- 
