@@ -19,7 +19,6 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	vertical-align: baseline;
 }
 
@@ -37,7 +36,11 @@ h2 {
     line-height: 24px;
 }
 h3 {
-    font-size: 22px;
+	border-bottom: 1px solid #7e7c7b;
+	font-size: 22px;
+	line-height: 32px;
+	margin-bottom: 25px;
+	padding-bottom: 25px;
 }
 h4 {
     font-size: 18px;
