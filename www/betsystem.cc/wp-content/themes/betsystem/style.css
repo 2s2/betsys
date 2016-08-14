@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('fonts/fontawesome-webfont.eot?v=4.6.3');
+  src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'), url('fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .clearfix:after {
     clear: both;
     content: " ";
@@ -37,7 +45,7 @@ html{
 
 body{
   font-family: Arial, sans-serif;
-  font-size: 13px; 
+  font-size: 14px;
   height: 100%;
   line-height: 19px;
   min-width: 960px;
@@ -152,16 +160,9 @@ body{
 
 .b-lang ul li:last-child a {
 	border-radius: 0px 0px 7px 7px; 
-} 
+}
 
-
-.b-lang ul a:active{
-	background: url('./images/lang_a_active.png') no-repeat;
-	text-decoration: none!important; 
-} 
-
-
-.b-menu{
+.b-menu {
 	clear: both;
 	padding-top: 45px;
 }
@@ -169,6 +170,18 @@ body{
 .b-menu ul > li {
 	float: left;
 	position: relative;
+}
+
+.b-menu ul > li.menu-item-has-children:after {
+	bottom: 7px;
+	color: #871416;
+	content: "\f107";
+	font: normal normal normal 11px/1 FontAwesome;
+	left: 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	z-index: 0;
 }
 
 .b-menu ul > li > a {
@@ -208,27 +221,11 @@ body{
 	color: #871416; 
 }
 
-.b-menu li#menu-item-304 > a{   
-	text-decoration: none; 
-	color: #4c4d4c; 
+.b-menu li.current-page-ancestor > a{
+	text-decoration: underline;
+	color: #54ae22;
 }
-.b-menu li#menu-item-304 a:hover{    
-	text-decoration: underline; 
-	color: #4c4d4c; 
-}
-.b-menu li#menu-item-307 > a{   
-	text-decoration: none; 
-	color: #4c4d4c; 
-}
-.b-menu li#menu-item-307 a:hover{    
-	text-decoration: underline; 
-	color: #4c4d4c; 
-}
-.b-menu li.current-page-ancestor > a{   
-	text-decoration: underline; 
-	color: #54ae22; 
-}
- 
+
 .b-menu li:hover ul {
 	visibility: visible;
 	opacity: 1;
@@ -243,7 +240,7 @@ body{
 	transition: 0.3s all ease-in-out;
 	top: 60px; 
 	z-index: 11111;
-	width: 139px;
+	width: 155px;
 	background: #272727;
 } 
 
@@ -301,47 +298,38 @@ body{
 }
 
 .b-sidebar{
+	box-sizing: border-box;
 	float: left;
 	width: 270px;
-	box-sizing: border-box;
 }
 
-.b-side-menu li{
-	margin-bottom: 33px;
-	display: block; 
+.b-side-menu li {
+	margin-bottom: 8px;
+	position: relative;
 }
- 
-.b-side-menu li a{
-	background: url('./images/side_menu_b.png') no-repeat 0px 2px;
-	padding-left: 40px;
-	font-size: 24px;
-	color:#666666; 
+
+.b-side-menu li a {
+	color: #363f45;
+	font-size: 15px;
+	padding-left: 10px;
 	text-decoration: none;
 }
 
-.b-side-menu li a:hover{
-	background: url('./images/side_menu_b.png') no-repeat 0px -37px;
+.b-side-menu li a:before {
+	color: #991b1e;
+	content: "\f111";
+	font: normal normal normal 6px/1 FontAwesome;
+	left: 0;
+	position: absolute;
+	top: 7px;
+	z-index: 0;
 }
 
-.b-side-menu li.current-menu-item a{
-	font-weight: bold;
-	color: #54ae22; 
-	background:url('./images/side_menu_b.png') no-repeat 0px -76px;  
-}
-.b-side-menu li.current-menu-parent a{
-	font-weight: bold;
-	color: #54ae22; 
-	background:url('./images/side_menu_b.png') no-repeat 0px -76px;  
+.b-side-menu li a:hover {
+	color: #57a405;
 }
 
-.b-side-menu li a:active{
-	font-weight: bold;
-	color: #54ae22; 
-	background:url('./images/side_menu_b.png') no-repeat 0px -77px;  
-}
-
-
-.b-laptop{
+.b-laptop {
 	background: url('./images/home_laptop.jpg') no-repeat;
 	width: 600px;
 	height: 339px;
@@ -409,24 +397,37 @@ body{
 }
 
 .b-btn-1{
-	width: 204px;
-	height: 57px;
-	background: url('./images/btn_1.png') no-repeat 0px 0px;
-	text-align: center;
-	color: #fff;
-	line-height: 53px;
-	display: inline-block;
+	box-shadow: none;
 	text-decoration: none;
-	font-size: 24px;
+	position: relative;
+	display: inline-block;
+	padding: 0 17px;
+	font: 16px/35px 'Roboto Condensed';
+	margin: 0;
+	border-radius: 0;
+	color: #ffffff;
+	background: none;
+	background-image: -webkit-linear-gradient(top, #991b1e 0%, #991b1e 100%);
+	background-image: -o-linear-gradient(top, #991b1e 0%, #991b1e 100%);
+	background-image: linear-gradient(to bottom, #991b1e 0%, #991b1e 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff991b1e', endColorstr='#ff991b1e', GradientType=0);
+	text-transform: uppercase;
+	float: none;
+	-webkit-transition: all 0.25s;
+	-o-transition: all 0.25s;
+	transition: all 0.25s;
 }
 
 .b-btn-1:hover{
-	background: url('./images/btn_1.png') no-repeat 0px -65px;
-}
-
-.b-btn-1:active{
-	background: url('./images/btn_1.png') no-repeat 0px -127px;
-	color: #54ae22; 
+	color: #ffffff;
+	background: none;
+	background-image: -webkit-linear-gradient(top, #57a405 0%, #398502 100%);
+	background-image: -o-linear-gradient(top, #57a405 0%, #398502 100%);
+	background-image: linear-gradient(to bottom, #57a405 0%, #398502 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff57a405', endColorstr='#ff398502', GradientType=0);
+	text-decoration: none;
 }
 
 .b-priem-wrap{
@@ -633,14 +634,22 @@ body{
 .b-post-item-text ul{
 	padding-top: 4px; 
 }
- 
-.b-post-item-text ul li{
-	background: url('./images/li_b_ul.png') no-repeat 0px 7px;
-	position: relative; 
-	padding-left: 12px;
+
+.b-post-item-text ul li {
 	margin-bottom: 7px;
+	padding-left: 12px;
+	position: relative;
 }
- 
+
+.b-post-item-text ul li:before {
+	color: #991b1e;
+	content: "\f111";
+	font: normal normal normal 6px/1 FontAwesome;
+	left: 0;
+	position: absolute;
+	top: 7px;
+	z-index: 0;
+}
 
 .b-post-item-text p{
 	margin-bottom: 13px;
@@ -673,28 +682,6 @@ body{
 .b-post-item-text .b-foot-cont{
 	font-size: 24px;
 	background-position: 0px 3px;
-}
-
-.b-back-link{
-	background: url('./images/back_link.png') no-repeat;
-	width: 259px;
-	height: 27px;
-	float: right;
-	text-align: center;
-	line-height: 27px;
-	margin-top: 10px;
-	text-decoration: none;
-	color: #7d7d7d;
-	font-size: 16px;
-}
-
-.b-back-link:hover{
-	background-position: 0px -37px;
-}
-
-.b-back-link:active{
-	background-position: 0px -70px;
-	color: #fff;
 }
 
 .b-mail-link{
