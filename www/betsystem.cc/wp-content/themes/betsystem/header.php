@@ -122,5 +122,3 @@ echo ' | ' . sprintf( __( 'Page %s', 'shape' ), max( $paged, $page ) );
       </div>
     </div>
   </div>
-
-  <div class="wraper clearfix">
