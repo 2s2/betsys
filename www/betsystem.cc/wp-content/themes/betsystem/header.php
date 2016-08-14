@@ -30,7 +30,7 @@ echo ' | ' . sprintf( __( 'Page %s', 'shape' ), max( $paged, $page ) );
 <meta name="viewport" content="width=1000" /> 
 <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/style.css" type="text/css" /> 
 <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/reset.css" type="text/css" />   
-<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'> 
 <link href="<?php echo get_template_directory_uri() ?>/js/bxslider/jquery.bxslider.css" rel="stylesheet" /> 
 <link href="<?php echo get_template_directory_uri() ?>/js/reval/reveal.css" rel="stylesheet" />  
@@ -41,117 +41,86 @@ echo ' | ' . sprintf( __( 'Page %s', 'shape' ), max( $paged, $page ) );
 </head> 
 <body <?php body_class(''); ?>> 
 
- <div class="wraper clearfix">
+   <div class="b-head clearfix">
+    <div class="wraper clearfix">
+      <a href="<?php if(ICL_LANGUAGE_CODE=='ru'): ?>
+          <?php echo get_site_url(); ?> 
+        <?php elseif(ICL_LANGUAGE_CODE=='en'): ?>
+          <?php echo get_site_url(); ?>/
+        <?php elseif(ICL_LANGUAGE_CODE=='es'): ?>
+        <?php echo get_site_url(); ?>/es/
+        <?php endif;?>" class="b-logo">
+        Bet System
+      </a>
+      <ul class="b-head-menu">
+        <li class="b-head-menu_item b-login-form"> 
 
-             <div class="b-head clearfix">
-                <div class="b-lang">
-                   <?php if(ICL_LANGUAGE_CODE=='ru'): ?> 
-                     <ul>
-                      <li><span class="current_lang">rus</span>
-                        <ul>
-                          <li><a href="<?php echo get_site_url(); ?>/es/">spa</a></li>
-                          <li><a href="<?php echo get_site_url(); ?>/">eng</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  <?php elseif(ICL_LANGUAGE_CODE=='en'): ?> 
-                     <ul>
-                      <li><span class="current_lang">eng</span>
-                        <ul>
-                          <li><a href="<?php echo get_site_url(); ?>/es/">spa</a></li>
-                          <li><a href="<?php echo get_site_url(); ?>/">rus</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  <?php elseif(ICL_LANGUAGE_CODE=='es'): ?> 
-                   <ul>
-                      <li><span class="current_lang">spa</span>
-                        <ul>
-                          <li><a href="<?php echo get_site_url(); ?>/">eng</a></li>
-                          <li><a href="<?php echo get_site_url(); ?>/">rus</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  <?php endif;?>
- 
-                </div>
-           
-                <div class="b-login-form"> 
-
-                  <?php if ( is_user_logged_in() ) { ?> 
-                        <a href="#" class=""> 
-                          <?php global $current_user;
-                                  get_currentuserinfo(); 
-                                  echo  $current_user->user_login; 
-                            ?></a>
-                          <a id="wp-logout" href="<?php echo wp_logout_url() ?>"  class=""> <?php if(ICL_LANGUAGE_CODE=='ru'): ?> 
-                          Выход 
-                        <?php elseif(ICL_LANGUAGE_CODE=='en'): ?> 
-                          Logout
-                        <?php elseif(ICL_LANGUAGE_CODE=='es'): ?> 
-                          Salida 
-                        <?php endif;?></a>
+          <?php if ( is_user_logged_in() ) { ?> 
+                <a href="#" class="b-head-menu_link"> 
+                  <?php global $current_user;
+                          get_currentuserinfo(); 
+                          echo  $current_user->user_login; 
+                    ?></a>
+                  <a id="wp-logout" href="<?php echo wp_logout_url() ?>"  class="b-head-menu_link"> <?php if(ICL_LANGUAGE_CODE=='ru'): ?> 
+                  Выход 
+                <?php elseif(ICL_LANGUAGE_CODE=='en'): ?> 
+                  Logout
+                <?php elseif(ICL_LANGUAGE_CODE=='es'): ?> 
+                  Salida 
+                <?php endif;?></a>
 
 
-                  <? } else { ?>
+          <? } else { ?>
 
-                    <a href="#" data-reveal-id="register_form" class="lwa-click"> 
-                                  <?php if(ICL_LANGUAGE_CODE=='ru'): ?> 
-                                    Регистр. 
-                                  <?php elseif(ICL_LANGUAGE_CODE=='en'): ?> 
-                                     Register 
-                                  <?php elseif(ICL_LANGUAGE_CODE=='es'): ?> 
-                                  Registrarse 
-                                  <?php endif;?></a>
-                                    <a href="#" data-reveal-id="enter_site" class=""> <?php if(ICL_LANGUAGE_CODE=='ru'): ?> 
-                                    Вход 
-                                  <?php elseif(ICL_LANGUAGE_CODE=='en'): ?> 
-                                     Sign in 
-                                  <?php elseif(ICL_LANGUAGE_CODE=='es'): ?> 
-                                   Entrada 
-                                  <?php endif;?></a>
+            <a href="#" data-reveal-id="register_form" class="lwa-click b-head-menu_link"> 
+              <?php if(ICL_LANGUAGE_CODE=='ru'): ?> 
+                Регистр. 
+              <?php elseif(ICL_LANGUAGE_CODE=='en'): ?> 
+                 Register 
+              <?php elseif(ICL_LANGUAGE_CODE=='es'): ?> 
+              Registrarse 
+              <?php endif;?></a>
+                <a href="#" data-reveal-id="enter_site" class="b-head-menu_link"> <?php if(ICL_LANGUAGE_CODE=='ru'): ?> 
+                Вход 
+              <?php elseif(ICL_LANGUAGE_CODE=='en'): ?> 
+                 Sign in 
+              <?php elseif(ICL_LANGUAGE_CODE=='es'): ?> 
+               Entrada 
+              <?php endif;?></a>
+           <? } ?>
+        </li>
+        <li class="b-head-menu_item b-lang">
+           <?php if(ICL_LANGUAGE_CODE=='ru'): ?> 
+             <span class="current_lang b-head-menu_link">rus</span>
+              <ul>
+                <li><a href="<?php echo get_site_url(); ?>/es/">spa</a></li>
+                <li><a href="<?php echo get_site_url(); ?>/">eng</a></li>
+              </ul>
+          <?php elseif(ICL_LANGUAGE_CODE=='en'): ?> 
+             <span class="current_lang b-head-menu_link">eng</span>
+            <ul>
+              <li><a href="<?php echo get_site_url(); ?>/es/">spa</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/">rus</a></li>
+            </ul>
+          <?php elseif(ICL_LANGUAGE_CODE=='es'): ?> 
+           <span class="current_lang b-head-menu_link">spa</span>
+            <ul>
+              <li><a href="<?php echo get_site_url(); ?>/">eng</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/">rus</a></li>
+            </ul>
+          <?php endif;?>
+        </li>
+      </ul>
+      <div class="b-menu">
+        <?php if(ICL_LANGUAGE_CODE=='ru'): ?>
+            <?php wp_nav_menu('menu=menu_ru'); ?>
+        <?php elseif(ICL_LANGUAGE_CODE=='en'): ?>
+            <?php wp_nav_menu('menu=menu_en'); ?>
+        <?php elseif(ICL_LANGUAGE_CODE=='es'): ?>
+          <?php wp_nav_menu('menu=menu_es'); ?>
+        <?php endif;?>
+      </div>
+    </div>
+  </div>
 
-                                  
-                   <? } ?>
-
-
-             
-                </div>
-
-
-
- <a href="<?php if(ICL_LANGUAGE_CODE=='ru'): ?>
-
-              <?php echo get_site_url(); ?> 
-
-            <?php elseif(ICL_LANGUAGE_CODE=='en'): ?>
-
-              <?php echo get_site_url(); ?>/
-
-            <?php elseif(ICL_LANGUAGE_CODE=='es'): ?>
-
-            <?php echo get_site_url(); ?>/es/
-
-            <?php endif;?>" class="b-logo">Bet System</a>
-
- 
-          <div class="b-menu">  
-
-             <?php if(ICL_LANGUAGE_CODE=='ru'): ?>
-
-                 <?php wp_nav_menu('menu=menu_ru'); ?>   
-
-              <?php elseif(ICL_LANGUAGE_CODE=='en'): ?>
-
-                 <?php wp_nav_menu('menu=menu_en'); ?>  
-
-              <?php elseif(ICL_LANGUAGE_CODE=='es'): ?>
-
-                <?php wp_nav_menu('menu=menu_es'); ?>  
-
-              <?php endif;?>  
-        </div>
-
-       
-             </div>
-       
+  <div class="wraper clearfix">

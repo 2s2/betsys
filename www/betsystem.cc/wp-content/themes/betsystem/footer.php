@@ -1,13 +1,11 @@
 <div class="b-footer-wrap"> 
+  <div class="b-footer-welcome_message">
+    <div class="wraper clearfix">
+      <?php the_field('footer_text') ?>
+    </div>
+  </div>
   <div class="wraper clearfix">
      <?php query_posts('showposts=1&post_type=sett');  if(have_posts()): while(have_posts()):the_post();?>
-    <div class="b-copyright"> 
-     
-                <?php the_field('footer_text') ?>   
-                
-        
-      
-    </div>
 
     <div class="b-foot-cont">
       <p><?php the_field('email') ?></p> 
@@ -17,10 +15,6 @@
      <?php endwhile; endif; wp_reset_query();  ?> 
   </div> 
 </div> 
-  
-
-
-
 
 <div id="get_consult" class="reveal-modal">
        <div class="b-consult-title">
