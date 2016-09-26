@@ -17,5 +17,5 @@
  
  					</div>
 					
-<a href="/payments-from-home/"><img src="http://betsystem.cc/wp-content/uploads/2015/09/1xbet.png" alt="Payments from home" style="border:1px solid #999;" /></a>
+<a href="payments-from-home/"><img src="http://betsystem.cc/wp-content/uploads/2015/09/1xbet.png" alt="Payments from home" style="border:1px solid #999;" /></a>
 				</div>
