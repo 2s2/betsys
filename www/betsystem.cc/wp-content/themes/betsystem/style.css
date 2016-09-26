@@ -65,7 +65,7 @@ body{
   -webkit-box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.15);
   background: #fff;
   box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.15);
-  padding: 30px 0 0;
+  padding: 15px 0 0;
   position: relative;
   z-index: 2;
 }
@@ -165,7 +165,7 @@ body{
 
 .b-menu {
 	clear: both;
-	padding-top: 45px;
+	padding-top: 15px;
 }
 
 .b-menu ul > li {
@@ -699,7 +699,6 @@ body{
  
 
 .b-post-item-text .b-foot-cont{
-	font-size: 24px;
 	background-position: 0px 3px;
 }
 
