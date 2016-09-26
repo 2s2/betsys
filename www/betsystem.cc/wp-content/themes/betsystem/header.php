@@ -43,12 +43,13 @@ echo ' | ' . sprintf( __( 'Page %s', 'shape' ), max( $paged, $page ) );
 
    <div class="b-head clearfix">
     <div class="wraper clearfix">
-      <a href="<?php if(ICL_LANGUAGE_CODE=='ru'): ?>
-          <?php echo get_site_url(); ?>/ru/
-        <?php elseif(ICL_LANGUAGE_CODE=='en'): ?>
+      <a href="
+        <?php if(ICL_LANGUAGE_CODE=='ru'): ?>
           <?php echo get_site_url(); ?>/
+        <?php elseif(ICL_LANGUAGE_CODE=='en'): ?>
+          <?php echo get_site_url(); ?>/en/
         <?php elseif(ICL_LANGUAGE_CODE=='es'): ?>
-        <?php echo get_site_url(); ?>/es/
+          <?php echo get_site_url(); ?>/es/
         <?php endif;?>" class="b-logo">
         Bet System
       </a>
@@ -94,19 +95,19 @@ echo ' | ' . sprintf( __( 'Page %s', 'shape' ), max( $paged, $page ) );
              <span class="current_lang b-head-menu_link">rus</span>
               <ul>
                 <li><a href="<?php echo get_site_url(); ?>/es/">spa</a></li>
-                <li><a href="<?php echo get_site_url(); ?>/">eng</a></li>
+                <li><a href="<?php echo get_site_url(); ?>/en/">eng</a></li>
               </ul>
           <?php elseif(ICL_LANGUAGE_CODE=='en'): ?> 
              <span class="current_lang b-head-menu_link">eng</span>
             <ul>
               <li><a href="<?php echo get_site_url(); ?>/es/">spa</a></li>
-              <li><a href="<?php echo get_site_url(); ?>/ru/">rus</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/">rus</a></li>
             </ul>
           <?php elseif(ICL_LANGUAGE_CODE=='es'): ?> 
            <span class="current_lang b-head-menu_link">spa</span>
             <ul>
-              <li><a href="<?php echo get_site_url(); ?>/">eng</a></li>
-              <li><a href="<?php echo get_site_url(); ?>/ru/">rus</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/en/">eng</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/">rus</a></li>
             </ul>
           <?php endif;?>
         </li>
